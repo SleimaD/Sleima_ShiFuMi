@@ -28,8 +28,8 @@ export default function Result(props) {
 
   return (
     <div className="result-container mt-[7rem] flex text-white justify-center items-center gap-[10rem]">
-        <div className="choice-container flex flex-col justify-normal items-center gap-5">
-            <p>You picked</p>
+        <div className="choice-container flex flex-col justify-normal items-center gap-9">
+            <p className=' uppercase font-bold'>You picked</p>
             <div className={`bg-white rounded-[60%] p-8  border-[10px] ${borderColors[props.userChoice]}`}>           
                  {userChoixImage && <img className='w-[3.5rem] h-[3rem]  ' src={userChoixImage} alt={props.userChoice} />}
             </div> 
@@ -41,8 +41,8 @@ export default function Result(props) {
             <button className='play bg-white text-black p-2 px-10 rounded-xl  border-white border-[2px] hover:bg-gray-200 ' onClick={props.playAgain}>PLAY AGAIN</button>
         </div>
 
-        <div className="choice-container flex flex-col justify-normal items-center gap-5">
-            <p>The house picked</p>
+        <div className="choice-container flex flex-col justify-normal items-center gap-9">
+            <p className=' uppercase font-bold'>The house picked</p>
             <div className={`bg-white rounded-[60%] p-8  border-[10px] ${borderColors[props.computerChoice]}`}>
                 {computerChoixImage && <img className='w-[3.5rem] h-[3rem]' src={computerChoixImage} alt={props.computerChoice} />}
             </div> 

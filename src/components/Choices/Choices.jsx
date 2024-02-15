@@ -3,6 +3,7 @@ import Rock from '../../assets/icon-rock.svg'
 import Paper from '../../assets/icon-paper.svg'
 import Scissors from '../../assets/icon-scissors.svg'
 import '../Choices/Choices.css'
+import Triangle from '../../assets/bg-triangle.svg'
 
 export default function (props) {
 
@@ -21,6 +22,7 @@ export default function (props) {
             <img className='w-[3rem]' src={Rock} alt="Rock" />
         </div>
         </div>
+        <img className='triangle absolute ' src={Triangle} alt="" />
   </div>
 
   )

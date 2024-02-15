@@ -53,11 +53,11 @@ function App() {
         <Choices play={play}/> 
       }
 
-      <button onClick={toggleModal} className="rules-button border-white border-2 p-2 px-4 rounded-lg text-white absolute bottom-[10%] right-[5%]">
+      <button onClick={myModal} className="rules-button border-white border-2 p-2 px-4 rounded-lg text-white absolute bottom-[10%] right-[5%]">
           RULES
       </button>
 
-      {modalVisible && <Modal toggleModal={toggleModal}/>}
+      {modalVisible && <Modal myModal={myModal}/>}
 
        
       </div>

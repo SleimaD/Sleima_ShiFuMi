@@ -8,8 +8,8 @@ export default function Title(props) {
                 <img className=' w-[70%]' src={Logo} alt="" />
             </div>
             <div className='score bg-white text-blue-950 w-[8rem] flex flex-col justify-center items-center rounded-xl p-2 gap-2'>
-                <h1>SCORE</h1>
-                <p className=' font-bold text-4xl'>{props.score}</p>
+                <h1 className='text-[1rem] text-blue-700'>SCORE</h1>
+                <p className=' font-bold text-gray-700 text-4xl'>{props.score}</p>
             </div>
     </div>
   )
