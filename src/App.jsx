@@ -3,6 +3,7 @@ import './App.css'
 import Title from './components/Title/Title'
 import Choices from './components/Choices/Choices'
 import Result from './components/Result/Result'
+import Modal from './components/Modal/Modal'
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
   const [computerChoice, setComputerChoice] = useState(null);
   const [score, setScore] = useState(0);
   const [gameState,setGamestate] = useState("jouer")
+  const [modalVisible, setModalVisible] = useState(false);
 
   const choices = {
     rock: { beats: 'scissors' },
@@ -44,9 +46,11 @@ function App() {
  
       {userChoice && computerChoice ? 
         <Result userChoice={userChoice} computerChoice={computerChoice} choices={choices} playAgain={playAgain}/> : 
-        <Choices play={play}/> }
+        <Choices play={play}/> 
+      }
 
-    </div>
+       
+      </div>
   )
 }
 
