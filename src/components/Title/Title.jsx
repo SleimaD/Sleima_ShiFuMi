@@ -9,7 +9,7 @@ export default function Title(props) {
             </div>
             <div className='score bg-white text-blue-950 w-[8rem] flex flex-col justify-center items-center rounded-xl p-2 gap-2 max-[400px]:w-[6rem]'>
                 <h1 className='text-[1rem] text-blue-700 max-[400px]:text-[0.5rem]'>SCORE</h1>
-                <p className=' font-bold text-gray-700 text-4xl max-[400px]:text-sm'>{props.score}</p>
+                <p className=' font-bold text-gray-700 text-4xl max-[400px]:text-[2rem]'>{props.score}</p>
             </div>
     </div>
   )
