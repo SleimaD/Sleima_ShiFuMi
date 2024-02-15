@@ -1,14 +1,13 @@
 .paper,.rock,.scissors {
-    box-shadow: inset 0px 2px 2px 2px grey;
     cursor: pointer;
 }
 
 .paper {
-    box-shadow: 0px 4px 2px rgb(9, 9, 129);
+    box-shadow: 0px 5px 0px rgb(6, 6, 120), inset 0px 2px 2px 2px grey;
 }
 .scissors {
-    box-shadow: 0px 4px 2px rgb(113, 88, 4);
+    box-shadow: 0px 5px 0px rgb(85, 65, 2), inset 0px 2px 2px 2px grey;
 }
 .rock {
-    box-shadow: 0px 4px 2px rgb(90, 31, 2);
+    box-shadow: 0px 5px 0px rgb(70, 25, 3), inset 0px 2px 2px 2px grey;
 }
