@@ -9,6 +9,7 @@ function App() {
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [score, setScore] = useState(0);
+  const [gameState,setGamestate] = useState("jouer")
 
   const choices = {
     rock: { beats: 'scissors' },
@@ -27,9 +28,6 @@ function App() {
   };
   
 
-  let playAgain = () => {
-    
-  }
 
 
 
@@ -38,12 +36,9 @@ function App() {
       <Title 
         score={score}
       />
-      {/* <Choices 
-        play={play}
-      /> */}
  
       {userChoice && computerChoice ? 
-        <Result userChoice={userChoice} computerChoice={computerChoice} choices={choices} playAgain={playAgain()}/> : 
+        <Result userChoice={userChoice} computerChoice={computerChoice} choices={choices} playAgain={playAgain}/> : 
         <Choices play={play}/> }
 
     </div>
