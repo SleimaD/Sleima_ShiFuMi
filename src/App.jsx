@@ -45,9 +45,10 @@ function App() {
             <p>
               You {choices[userChoice].beats === computerChoice ? 'Win' : 'Lose'}!
             </p>
+            
           </div>
         ) : (
-          <p className=' text-white'>Make your choice!</p>
+          <p className=' text-white'>Make your choice !</p>
         )}
       </div>
 
