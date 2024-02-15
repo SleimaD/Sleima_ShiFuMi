@@ -37,6 +37,19 @@ function App() {
 
       />
       <Choices play={play}/>
+      <div className="mt-4">
+        {userChoice && computerChoice ? (
+          <div className=' text-white'>
+            <p>You picked: {userChoice}</p>
+            <p>The house picked: {computerChoice}</p>
+            <p>
+              You {choices[userChoice].beats === computerChoice ? 'Win' : 'Lose'}!
+            </p>
+          </div>
+        ) : (
+          <p className=' text-white'>Make your choice!</p>
+        )}
+      </div>
 
     </div>
   )
