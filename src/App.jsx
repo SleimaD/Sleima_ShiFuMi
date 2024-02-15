@@ -36,6 +36,10 @@ function App() {
     setComputerChoice(null);
   }
 
+  let myModal = () => {
+    setModalVisible(!modalVisible);
+  };
+
 
 
   return (
