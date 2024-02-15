@@ -24,7 +24,7 @@ function App() {
 
     setUserChoice(userChoice);
     setComputerChoice(computerChoice);
-    setScore( score + (choices[userChoice].beats === computerChoice ? 1 : 0) );
+    setScore( score + (choices[userChoice].beats === computerChoice ? 1 : -1) );
   };
   
 

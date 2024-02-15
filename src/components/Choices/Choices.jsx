@@ -6,9 +6,6 @@ import '../Choices/Choices.css'
 
 export default function (props) {
 
-
-
-
   return (
     <div className='fightContainer flex flex-col justify-center items-center mt-16 w-[80%] gap-20'>
         <div className='flex items-center justify-between gap-[8rem]'>

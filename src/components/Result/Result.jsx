@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import Rock from '../../assets/icon-rock.svg'
+import Paper from '../../assets/icon-paper.svg'
+import Scissors from '../../assets/icon-scissors.svg'
+
 
 export default function Result(props) {
 
@@ -15,12 +19,26 @@ export default function Result(props) {
       }
     }
 
+    let choixImages = {
+        rock: Rock,
+        paper: Paper,
+        scissors: Scissors
+    };
+    
+
+    let userChoixImage = choixImages[props.userChoice];
+    let computerChoixImage = choixImages[props.computerChoice];
+  
+    
+
 
   return (
     <div className="result-container mt-[7rem] flex text-white justify-center items-center gap-[10rem]">
         <div className="choice-container flex flex-col justify-normal items-center gap-5">
             <p>You picked</p>
-            <div>{props.userChoice}</div> 
+            <div className='bg-white rounded-[60%] p-8  border-[10px]'>           
+                 {userChoixImage && <img className='w-[3.5rem]  ' src={userChoixImage} alt={props.userChoice} />}
+            </div> 
         </div>
 
         <div className="result-message flex flex-col justify-normal items-center gap-5">
@@ -32,12 +50,16 @@ export default function Result(props) {
 
         <div className="choice-container flex flex-col justify-normal items-center gap-5">
             <p>The house picked</p>
-            <div>{props.computerChoice}</div> 
+            <div className='bg-white rounded-[60%] p-8  border-[10px]'>
+                {computerChoixImage && <img className='w-[3.5rem] ' src={computerChoixImage} alt={props.computerChoice} />}
+            </div> 
         </div>
   </div>
 
   )
 }
+
+
 
 
 
