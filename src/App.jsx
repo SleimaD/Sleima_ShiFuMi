@@ -28,6 +28,11 @@ function App() {
   };
   
 
+  let playAgain = () => {
+    setGamestate("jouer") 
+    setUserChoice(null);
+    setComputerChoice(null);
+  }
 
 
 
