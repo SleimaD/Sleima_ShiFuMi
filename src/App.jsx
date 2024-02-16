@@ -12,6 +12,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [gameState,setGamestate] = useState("jouer")
   const [modalVisible, setModalVisible] = useState(false);
+  const [attempts,setAttempts] = useState(0)
 
   const choices = {
     rock: { beats: 'scissors' },
@@ -27,6 +28,11 @@ function App() {
     setUserChoice(userChoice);
     setComputerChoice(computerChoice);
     setScore( score + (choices[userChoice].beats === computerChoice ? 1 : (choices[computerChoice].beats === userChoice ? -1 : 0)) );
+    if (attempts >= 5) {
+      alert("vous avez atteint le nombre maximum de tentatives")
+      return
+    }
+    setAttempts(attempts+1)
   };
   
 
@@ -34,6 +40,7 @@ function App() {
     setGamestate("jouer") 
     setUserChoice(null);
     setComputerChoice(null);
+    setAttempts(0)
   }
 
 
@@ -54,11 +61,11 @@ function App() {
         <Choices play={play}/> 
       }
 
-      <button onClick={myModal} className="rules-button border-white border-2 p-2 px-4 rounded-lg text-white absolute bottom-[10%] right-[5%] max-[400px]:right-[38%] max-[400px]:bottom-[3%]">
+      <button onClick={myModal} className="rules-button border-white border-2 p-2 px-4 rounded-lg text-white absolute bottom-[10%] right-[5%] max-[400px]:right-[39%] max-[400px]:bottom-[2%]">
           RULES
       </button>
 
-      {modalVisible && <Modal myModal={myModal}/>}
+      {modalVisible && <Modal myModal={myModal} />}
 
        
       </div>
